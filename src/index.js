@@ -25,8 +25,17 @@ window.onload = function () {
 
     // context.stroke();
     context.font = "42px Arial";
+    context.fillStyle = "black";
+    context.strokeStyle = "purple";
 
     context.fillText("Hello World", 300, 100);
+    context.strokeText("Hello World", 300, 100);
+
+    var img = new Image();
+    img.src = "./img/192-1923064_new-github-octocat-github-octocat.png";
+    img.onload = function () {
+		context.drawImage(img, 200, 100, 300, 300);
+	}
     
 };
 
